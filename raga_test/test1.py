@@ -8,7 +8,7 @@ GENES = '''abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOP
 QRSTUVWXYZ 1234567890, .-;:_!"#%&/()=?@${[]}'''
  
 # Target string to be generated
-TARGET = "I love GeeksforGeeks"
+TARGET = "Genetic for Raga"
  
 class Individual(object):
     '''
@@ -90,7 +90,7 @@ def main():
     population = []
  
     # create initial population
-    for _ in range(POPULATION_SIZE):
+    for i in range(POPULATION_SIZE):
                 gnome = Individual.create_gnome()
                 population.append(Individual(gnome))
  
@@ -117,7 +117,7 @@ def main():
         # From 50% of fittest population, Individuals
         # will mate to produce offspring
         s = int((90*POPULATION_SIZE)/100)
-        for _ in range(s):
+        for i in range(s):
             parent1 = random.choice(population[:50])
             parent2 = random.choice(population[:50])
             child = parent1.mate(parent2)
